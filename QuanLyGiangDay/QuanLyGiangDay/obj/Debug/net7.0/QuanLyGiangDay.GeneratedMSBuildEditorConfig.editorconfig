@@ -1,0 +1,225 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = QuanLyGiangDay
+build_property.RootNamespace = QuanLyGiangDay
+build_property.ProjectDir = D:\HONGAN\QuanLyGiangDay\QuanLyGiangDay\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\HONGAN\QuanLyGiangDay\QuanLyGiangDay
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TDanToc/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVERhblRvY1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TDanToc/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVERhblRvY1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TDanToc/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVERhblRvY1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TDanToc/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVERhblRvY1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TDanToc/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVERhblRvY1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TGiaoVien/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEdpYW9WaWVuXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TGiaoVien/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEdpYW9WaWVuXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TGiaoVien/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEdpYW9WaWVuXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TGiaoVien/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEdpYW9WaWVuXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TGiaoVien/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEdpYW9WaWVuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TKetQua/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEtldFF1YVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TKetQua/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEtldFF1YVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TKetQua/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEtldFF1YVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TKetQua/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEtldFF1YVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TKetQua/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVEtldFF1YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TLop/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVExvcFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TLop/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVExvcFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TLop/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVExvcFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TLop/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVExvcFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TLop/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVExvcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TMonHoc/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVE1vbkhvY1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TMonHoc/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVE1vbkhvY1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TMonHoc/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVE1vbkhvY1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TMonHoc/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVE1vbkhvY1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TMonHoc/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVE1vbkhvY1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TPhanCong/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFBoYW5Db25nXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TPhanCong/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFBoYW5Db25nXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TPhanCong/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFBoYW5Db25nXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TPhanCong/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFBoYW5Db25nXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TPhanCong/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFBoYW5Db25nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TQueQuan/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFF1ZVF1YW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TQueQuan/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFF1ZVF1YW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TQueQuan/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFF1ZVF1YW5cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TQueQuan/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFF1ZVF1YW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TQueQuan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFF1ZVF1YW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TSinhVien/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFNpbmhWaWVuXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TSinhVien/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFNpbmhWaWVuXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TSinhVien/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFNpbmhWaWVuXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TSinhVien/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFNpbmhWaWVuXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TSinhVien/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFNpbmhWaWVuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TTonGiao/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFRvbkdpYW9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TTonGiao/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFRvbkdpYW9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TTonGiao/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFRvbkdpYW9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TTonGiao/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFRvbkdpYW9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/TTonGiao/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVFRvbkdpYW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HONGAN/QuanLyGiangDay/QuanLyGiangDay/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9nc0nmfktp

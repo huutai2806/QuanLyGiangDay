@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\QuanLyGiangDay.props" />
+</Project>

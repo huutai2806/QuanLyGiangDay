@@ -1,0 +1,105 @@
+{
+  "version": 2,
+  "dgSpecHash": "fpBzf3QmzbDaIXXDnFDwcj2/tNqIlpHuFdR6w+p0TcDK59C8brg/YTB562efDjfpwkKB/LZC2JYkDPnvVGXeOA==",
+  "success": false,
+  "projectFilePath": "D:\\HONGAN\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\daing\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
+    "C:\\Users\\daing\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.4\\microsoft.entityframeworkcore.design.7.0.4.nupkg.sha512",
+    "C:\\Users\\daing\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.4\\microsoft.entityframeworkcore.sqlserver.7.0.4.nupkg.sha512",
+    "C:\\Users\\daing\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.4\\microsoft.entityframeworkcore.tools.7.0.4.nupkg.sha512",
+    "C:\\Users\\daing\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\7.0.5\\microsoft.visualstudio.web.codegeneration.design.7.0.5.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0). Package Microsoft.EntityFrameworkCore 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore.Design 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0). Package Microsoft.EntityFrameworkCore.Design 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.VisualStudio.Web.CodeGeneration.Design 7.0.5 is not compatible with net70 (.NETFramework,Version=v7.0). Package Microsoft.VisualStudio.Web.CodeGeneration.Design 7.0.5 supports: net7.0 (.NETCoreApp,Version=v7.0)",
+      "libraryId": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore.Tools 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0). Package Microsoft.EntityFrameworkCore.Tools 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore.SqlServer 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0). Package Microsoft.EntityFrameworkCore.SqlServer 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0) / win7-x86. Package Microsoft.EntityFrameworkCore 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0/win7-x86"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore.Design 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0) / win7-x86. Package Microsoft.EntityFrameworkCore.Design 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0/win7-x86"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.VisualStudio.Web.CodeGeneration.Design 7.0.5 is not compatible with net70 (.NETFramework,Version=v7.0) / win7-x86. Package Microsoft.VisualStudio.Web.CodeGeneration.Design 7.0.5 supports: net7.0 (.NETCoreApp,Version=v7.0)",
+      "libraryId": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0/win7-x86"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore.Tools 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0) / win7-x86. Package Microsoft.EntityFrameworkCore.Tools 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0/win7-x86"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore.SqlServer 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0) / win7-x86. Package Microsoft.EntityFrameworkCore.SqlServer 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0/win7-x86"
+      ]
+    }
+  ]
+}

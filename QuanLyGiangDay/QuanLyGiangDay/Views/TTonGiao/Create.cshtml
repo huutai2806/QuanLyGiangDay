@@ -1,0 +1,39 @@
+﻿@model QuanLyGiangDay.Models.TTonGiao
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>TTonGiao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MaTonGiao" class="control-label"></label>
+                <input asp-for="MaTonGiao" class="form-control" />
+                <span asp-validation-for="MaTonGiao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenTonGiao" class="control-label"></label>
+                <input asp-for="TenTonGiao" class="form-control" />
+                <span asp-validation-for="TenTonGiao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
