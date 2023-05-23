@@ -19,12 +19,21 @@ namespace QuanLyGiangDay.Controllers
         }
 
         // GET: TLop
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string searchString)
         {
-            var quanLyGiangDayContext = _context.TLops.Include(t => t.MaGvcnNavigation);
-            return View(await quanLyGiangDayContext.ToListAsync());
-        }
+            var lop = from l in _context.TLops
+                      select l;
 
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                lop = lop.Where(s => s.MaLop.ToString().Contains(searchString)
+                                     || s.TenLop.Contains(searchString)
+                                     || s.MaNganhHoc.ToString().Contains(searchString)
+                                     || s.MaGvcn.ToString().Contains(searchString));
+            }
+
+            return View(lop);
+        }
         // GET: TLop/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -84,10 +93,6 @@ namespace QuanLyGiangDay.Controllers
             ViewData["MaGvcn"] = new SelectList(_context.TGiaoViens, "MaGiaoVien", "MaGiaoVien", tLop.MaGvcn);
             return View(tLop);
         }
-
-        // POST: TLop/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaLop,TenLop,MaNganhHoc,MaGvcn")] TLop tLop)

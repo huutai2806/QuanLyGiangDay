@@ -19,10 +19,24 @@ namespace QuanLyGiangDay.Controllers
         }
 
         // GET: TGiaoVien
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var quanLyGiangDayContext = _context.TGiaoViens.Include(t => t.MaDanTocNavigation).Include(t => t.MaQueQuanNavigation).Include(t => t.MaTonGiaoNavigation);
-            return View(await quanLyGiangDayContext.ToListAsync());
+            var giaoViens = from gv in _context.TGiaoViens
+                            select gv;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                giaoViens = giaoViens.Where(gv => gv.MaGiaoVien.ToString().Contains(searchString)
+                                                || gv.TenGiaoVien.Contains(searchString)
+                                                || gv.PhaiNu.Contains(searchString)
+                                                || gv.SoDienThoai.Contains(searchString)
+                                                || gv.DiaChi.Contains(searchString)
+                                                || gv.Email.Contains(searchString)
+                                                || gv.MaQueQuan.ToString().Contains(searchString)
+                                                || gv.MaDanToc.ToString().Contains(searchString)
+                                                || gv.MaTonGiao.ToString().Contains(searchString));
+            }
+            return View(await giaoViens.ToListAsync());
         }
 
         // GET: TGiaoVien/Details/5
@@ -54,10 +68,6 @@ namespace QuanLyGiangDay.Controllers
             ViewData["MaTonGiao"] = new SelectList(_context.TTonGiaos, "MaTonGiao", "MaTonGiao");
             return View();
         }
-
-        // POST: TGiaoVien/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaGiaoVien,TenGiaoVien,PhaiNu,SoDienThoai,DiaChi,Email,MaQueQuan,MaDanToc,MaTonGiao")] TGiaoVien tGiaoVien)
@@ -92,10 +102,6 @@ namespace QuanLyGiangDay.Controllers
             ViewData["MaTonGiao"] = new SelectList(_context.TTonGiaos, "MaTonGiao", "MaTonGiao", tGiaoVien.MaTonGiao);
             return View(tGiaoVien);
         }
-
-        // POST: TGiaoVien/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaGiaoVien,TenGiaoVien,PhaiNu,SoDienThoai,DiaChi,Email,MaQueQuan,MaDanToc,MaTonGiao")] TGiaoVien tGiaoVien)

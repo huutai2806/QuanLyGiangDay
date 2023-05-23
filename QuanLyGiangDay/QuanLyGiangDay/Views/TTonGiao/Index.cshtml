@@ -5,14 +5,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Tôn Giáo</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Thêm</a>
 </p>
+<form asp-controller="TTonGiao" asp-action="Index" method="get">
+    <p>
+        Tìm kiếm: <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" />
+        <input type="submit" value="Tìm kiếm" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaTonGiao)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.TenTonGiao)
             </th>
@@ -23,12 +32,15 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.MaTonGiao)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.TenTonGiao)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.MaTonGiao">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaTonGiao">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaTonGiao">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.MaTonGiao">Sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.MaTonGiao">Chi tiết</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaTonGiao">Xóa</a>
             </td>
         </tr>
 }

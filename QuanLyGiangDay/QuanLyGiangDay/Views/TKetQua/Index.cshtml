@@ -5,11 +5,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Kết Quả</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Thêm</a>
 </p>
+<form method="get">
+    <p>
+        <label>Tìm kiếm:</label>
+        <input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
+        <input type="submit" value="Tìm kiếm" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -44,9 +51,9 @@
                 @Html.DisplayFor(modelItem => item.MaSinhVienNavigation.MaSinhVien)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.ActionLink("Edit", "Edit", new {id = item.Diem }) |
+                    @Html.ActionLink("Details", "Details", new {id = item.Diem }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Diem})
             </td>
         </tr>
 }

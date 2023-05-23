@@ -19,13 +19,25 @@ namespace QuanLyGiangDay.Controllers
         }
 
         // GET: TMonHoc
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //      return _context.TMonHocs != null ? 
+        //                  View(await _context.TMonHocs.ToListAsync()) :
+        //                  Problem("Entity set 'QuanLyGiangDayContext.TMonHocs'  is null.");
+        //}
+        public async Task<IActionResult> Index(string searchString)
         {
-              return _context.TMonHocs != null ? 
-                          View(await _context.TMonHocs.ToListAsync()) :
-                          Problem("Entity set 'QuanLyGiangDayContext.TMonHocs'  is null.");
-        }
+            IQueryable<TMonHoc> monHoc = _context.TMonHocs;
 
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                monHoc = monHoc.Where(mh => mh.MaMonHoc.ToString().Contains(searchString)
+                            || mh.TenMonHoc.Contains(searchString)
+                            || mh.SoTietLyThuyet.ToString().Equals(searchString)
+                            || mh.SoTietThucHanh.ToString().Equals(searchString));
+            }
+            return View(await monHoc.ToListAsync());
+        }
         // GET: TMonHoc/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -49,10 +61,6 @@ namespace QuanLyGiangDay.Controllers
         {
             return View();
         }
-
-        // POST: TMonHoc/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaMonHoc,TenMonHoc,SoTietLyThuyet,SoTietThucHanh")] TMonHoc tMonHoc)
@@ -81,10 +89,6 @@ namespace QuanLyGiangDay.Controllers
             }
             return View(tMonHoc);
         }
-
-        // POST: TMonHoc/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaMonHoc,TenMonHoc,SoTietLyThuyet,SoTietThucHanh")] TMonHoc tMonHoc)

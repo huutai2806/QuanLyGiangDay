@@ -15,7 +15,7 @@ public partial class TPhanCong
 
     public int? HocKy { get; set; }
 
-    public int? Năm { get; set; }
+    public int? Nam { get; set; }
 
     public DateTime? NgayBatDau { get; set; }
 

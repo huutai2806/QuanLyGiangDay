@@ -19,13 +19,17 @@ namespace QuanLyGiangDay.Controllers
         }
 
         // GET: TDanToc
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string searchString)
         {
-              return _context.TDanTocs != null ? 
-                          View(await _context.TDanTocs.ToListAsync()) :
-                          Problem("Entity set 'QuanLyGiangDayContext.TDanTocs'  is null.");
-        }
+            var danTocs = from dt in _context.TDanTocs select dt;
 
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                danTocs = danTocs.Where(dt => dt.MaDanToc.ToString().Contains(searchString) || dt.TenDanToc.Contains(searchString));
+            }
+
+            return View(danTocs.ToList());
+        }
         // GET: TDanToc/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -49,10 +53,6 @@ namespace QuanLyGiangDay.Controllers
         {
             return View();
         }
-
-        // POST: TDanToc/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaDanToc,TenDanToc")] TDanToc tDanToc)
@@ -81,10 +81,6 @@ namespace QuanLyGiangDay.Controllers
             }
             return View(tDanToc);
         }
-
-        // POST: TDanToc/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaDanToc,TenDanToc")] TDanToc tDanToc)

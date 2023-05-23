@@ -19,10 +19,27 @@ namespace QuanLyGiangDay.Controllers
         }
 
         // GET: TSinhVien
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var quanLyGiangDayContext = _context.TSinhViens.Include(t => t.MaDanTocNavigation).Include(t => t.MaLopNavigation).Include(t => t.MaQueQuanNavigation).Include(t => t.MaTonGiaoNavigation);
-            return View(await quanLyGiangDayContext.ToListAsync());
+            var sinhViens = from s in _context.TSinhViens
+                            select s;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                sinhViens = sinhViens.Where(s => s.MaSinhVien.ToString().Contains(searchString)
+                                                || s.HoSinhVien.Contains(searchString)
+                                                || s.TenSinhVien.Contains(searchString)
+                                                || s.MaLopNavigation.TenLop.Contains(searchString)
+                                                || s.PhaiNu.Contains(searchString)
+                                                || s.DiaChi.Contains(searchString)
+                                                || s.MaQueQuanNavigation.TenTinhThanhPho.Contains(searchString)
+                                                || s.MaQueQuanNavigation.TenQuanHuyen.Contains(searchString)
+                                                || s.MaQueQuanNavigation.TenPhuongXa.Contains(searchString)
+                                                || s.MaDanTocNavigation.TenDanToc.Contains(searchString)
+                                                || s.MaTonGiaoNavigation.TenTonGiao.Contains(searchString));
+            }
+
+            return View(await sinhViens.AsNoTracking().ToListAsync());
         }
 
         // GET: TSinhVien/Details/5
@@ -56,10 +73,6 @@ namespace QuanLyGiangDay.Controllers
             ViewData["MaTonGiao"] = new SelectList(_context.TTonGiaos, "MaTonGiao", "MaTonGiao");
             return View();
         }
-
-        // POST: TSinhVien/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaSinhVien,HoSinhVien,TenSinhVien,MaLop,PhaiNu,NgaySinh,DiaChi,MaQueQuan,Hinh,MaDanToc,MaTonGiao")] TSinhVien tSinhVien)
@@ -96,10 +109,6 @@ namespace QuanLyGiangDay.Controllers
             ViewData["MaTonGiao"] = new SelectList(_context.TTonGiaos, "MaTonGiao", "MaTonGiao", tSinhVien.MaTonGiao);
             return View(tSinhVien);
         }
-
-        // POST: TSinhVien/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaSinhVien,HoSinhVien,TenSinhVien,MaLop,PhaiNu,NgaySinh,DiaChi,MaQueQuan,Hinh,MaDanToc,MaTonGiao")] TSinhVien tSinhVien)

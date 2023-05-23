@@ -5,14 +5,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Lớp</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Thêm</a>
 </p>
+<form method="get">
+    <p>
+        <label>Tìm kiếm:</label>
+        <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" />
+        <input type="submit" value="Tìm kiếm" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaLop)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.TenLop)
             </th>
@@ -29,8 +39,11 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.TenLop)
+                @Html.DisplayFor(modelItem => item.MaLop)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenLop)
+           </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MaNganhHoc)
             </td>
@@ -38,9 +51,9 @@
                 @Html.DisplayFor(modelItem => item.MaGvcnNavigation.MaGiaoVien)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.MaLop">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaLop">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaLop">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.MaLop">Sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.MaLop">Chi tiết</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaLop">Xóa</a>
             </td>
         </tr>
 }

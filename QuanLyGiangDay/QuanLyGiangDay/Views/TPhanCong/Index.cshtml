@@ -5,11 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Phân Công</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Thêm</a>
 </p>
+<form method="get" action="@Url.Action("TimKiem")">
+    <div class="input-group mb-3">
+        <input type="text" name="searchString" class="form-control" placeholder="Tìm kiếm" aria-label="Tìm kiếm" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit">Tìm kiếm</button>
+        </div>
+    </div>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -17,7 +25,7 @@
                 @Html.DisplayNameFor(model => model.HocKy)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Năm)
+                @Html.DisplayNameFor(model => model.Nam)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.NgayBatDau)
@@ -44,7 +52,7 @@
                 @Html.DisplayFor(modelItem => item.HocKy)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Năm)
+                @Html.DisplayFor(modelItem => item.Nam)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NgayBatDau)
@@ -62,9 +70,9 @@
                 @Html.DisplayFor(modelItem => item.MaMonHocNavigation.MaMonHoc)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.MaPhanCong">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaPhanCong">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaPhanCong">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.MaPhanCong">Sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.MaPhanCong">Chi tiết</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaPhanCong">Xóa</a>
             </td>
         </tr>
 }

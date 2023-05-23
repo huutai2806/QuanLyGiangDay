@@ -19,10 +19,16 @@ namespace QuanLyGiangDay.Controllers
         }
 
         // GET: TKetQua
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var quanLyGiangDayContext = _context.TKetQuas.Include(t => t.MaPhanCongNavigation).Include(t => t.MaSinhVienNavigation);
-            return View(await quanLyGiangDayContext.ToListAsync());
+            var kếtQuả = from kq in _context.TKetQuas
+                         select kq;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                kếtQuả = kếtQuả.Where(kq => kq.MaSinhVien.ToString().Contains(searchString)
+                    || kq.MaPhanCong.ToString().Contains(searchString));
+            }
+            return View(await kếtQuả.ToListAsync());
         }
 
         // GET: TKetQua/Details/5
@@ -52,10 +58,6 @@ namespace QuanLyGiangDay.Controllers
             ViewData["MaSinhVien"] = new SelectList(_context.TSinhViens, "MaSinhVien", "MaSinhVien");
             return View();
         }
-
-        // POST: TKetQua/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaPhanCong,MaSinhVien,LanThi,Diem,GhiChu")] TKetQua tKetQua)
@@ -88,10 +90,6 @@ namespace QuanLyGiangDay.Controllers
             ViewData["MaSinhVien"] = new SelectList(_context.TSinhViens, "MaSinhVien", "MaSinhVien", tKetQua.MaSinhVien);
             return View(tKetQua);
         }
-
-        // POST: TKetQua/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaPhanCong,MaSinhVien,LanThi,Diem,GhiChu")] TKetQua tKetQua)

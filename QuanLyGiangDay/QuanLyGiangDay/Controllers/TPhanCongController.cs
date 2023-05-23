@@ -24,7 +24,23 @@ namespace QuanLyGiangDay.Controllers
             var quanLyGiangDayContext = _context.TPhanCongs.Include(t => t.MaGiaoVienNavigation).Include(t => t.MaLopNavigation).Include(t => t.MaMonHocNavigation);
             return View(await quanLyGiangDayContext.ToListAsync());
         }
+        public IActionResult TimKiem(string searchString)
+        {
+            var phanCongs = from pc in _context.TPhanCongs
+                            select pc;
 
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                phanCongs = phanCongs.Where(pc => pc.MaPhanCong.ToString().Contains(searchString)
+                                                || pc.MaMonHoc.ToString().Contains(searchString)
+                                                || pc.MaGiaoVien.ToString().Contains(searchString)
+                                                || pc.MaLop.ToString().Contains(searchString)
+                                                || pc.HocKy.ToString().Contains(searchString)
+                                                || pc.Nam.ToString().Contains(searchString));
+            }
+
+            return View("Index", phanCongs);
+        }
         // GET: TPhanCong/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -54,10 +70,6 @@ namespace QuanLyGiangDay.Controllers
             ViewData["MaMonHoc"] = new SelectList(_context.TMonHocs, "MaMonHoc", "MaMonHoc");
             return View();
         }
-
-        // POST: TPhanCong/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaPhanCong,MaMonHoc,MaGiaoVien,MaLop,HocKy,Năm,NgayBatDau,NgayKetThuc")] TPhanCong tPhanCong)
@@ -92,10 +104,6 @@ namespace QuanLyGiangDay.Controllers
             ViewData["MaMonHoc"] = new SelectList(_context.TMonHocs, "MaMonHoc", "MaMonHoc", tPhanCong.MaMonHoc);
             return View(tPhanCong);
         }
-
-        // POST: TPhanCong/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaPhanCong,MaMonHoc,MaGiaoVien,MaLop,HocKy,Năm,NgayBatDau,NgayKetThuc")] TPhanCong tPhanCong)

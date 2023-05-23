@@ -1,48 +1,60 @@
-﻿@model IEnumerable<QuanLyGiangDay.Models.TQueQuan>
+﻿    @model IEnumerable<QuanLyGiangDay.Models.TQueQuan>
 
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+    @{
+        ViewData["Title"] = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 
-<h1>Index</h1>
+    <h1>Quê Quán</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.TenTinhThanhPho)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenQuanHuyen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenPhuongXa)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenTinhThanhPho)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenQuanHuyen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenPhuongXa)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaQueQuan">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaQueQuan">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaQueQuan">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <p>
+        <a asp-action="Create">Thêm</a>
+    </p>
+    <form asp-action="Search" method="get">
+        <p>
+            <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" />
+            <input type="submit" value="Search" />
+        </p>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaQueQuan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenTinhThanhPho)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenQuanHuyen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TenPhuongXa)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaQueQuan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenTinhThanhPho)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenQuanHuyen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenPhuongXa)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaQueQuan">Sửa</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaQueQuan">Chi tiếtt</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaQueQuan">Xóa</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>

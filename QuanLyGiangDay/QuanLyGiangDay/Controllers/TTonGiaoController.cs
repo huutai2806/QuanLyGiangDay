@@ -19,13 +19,19 @@ namespace QuanLyGiangDay.Controllers
         }
 
         // GET: TTonGiao
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-              return _context.TTonGiaos != null ? 
-                          View(await _context.TTonGiaos.ToListAsync()) :
-                          Problem("Entity set 'QuanLyGiangDayContext.TTonGiaos'  is null.");
-        }
+            var tonGiao = from tg in _context.TTonGiaos
+                          select tg;
 
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                tonGiao = tonGiao.Where(tg => tg.MaTonGiao.ToString().Contains(searchString)
+                                            || tg.TenTonGiao.Contains(searchString));
+            }
+
+            return View(await tonGiao.ToListAsync());
+        }
         // GET: TTonGiao/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -49,10 +55,6 @@ namespace QuanLyGiangDay.Controllers
         {
             return View();
         }
-
-        // POST: TTonGiao/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaTonGiao,TenTonGiao")] TTonGiao tTonGiao)
@@ -81,10 +83,6 @@ namespace QuanLyGiangDay.Controllers
             }
             return View(tTonGiao);
         }
-
-        // POST: TTonGiao/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaTonGiao,TenTonGiao")] TTonGiao tTonGiao)

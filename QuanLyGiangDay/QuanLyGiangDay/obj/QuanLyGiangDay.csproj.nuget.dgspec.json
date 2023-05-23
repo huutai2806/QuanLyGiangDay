@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HONGAN\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay.csproj": {}
+    "D:\\HALTW\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay.csproj": {}
   },
   "projects": {
-    "D:\\HONGAN\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay.csproj": {
+    "D:\\HALTW\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HONGAN\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay.csproj",
+        "projectUniqueName": "D:\\HALTW\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay.csproj",
         "projectName": "QuanLyGiangDay",
-        "projectPath": "D:\\HONGAN\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay.csproj",
+        "projectPath": "D:\\HALTW\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay.csproj",
         "packagesPath": "C:\\Users\\daing\\.nuget\\packages\\",
-        "outputPath": "D:\\HONGAN\\QuanLyGiangDay\\QuanLyGiangDay\\obj\\",
+        "outputPath": "D:\\HALTW\\QuanLyGiangDay\\QuanLyGiangDay\\QuanLyGiangDay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\daing\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -25,7 +25,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net70": {
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -36,39 +37,54 @@
         }
       },
       "frameworks": {
-        "net70": {
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.6, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win7-x86": {
-          "#import": []
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

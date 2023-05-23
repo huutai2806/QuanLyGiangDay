@@ -25,7 +25,21 @@ namespace QuanLyGiangDay.Controllers
                           View(await _context.TQueQuans.ToListAsync()) :
                           Problem("Entity set 'QuanLyGiangDayContext.TQueQuans'  is null.");
         }
+        public IActionResult Search(string searchString)
+        {
+            var queQuans = from qq in _context.TQueQuans
+                           select qq;
 
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                queQuans = queQuans.Where(qq => qq.MaQueQuan.ToString().Contains(searchString)
+                                             || qq.TenTinhThanhPho.Contains(searchString)
+                                             || qq.TenQuanHuyen.Contains(searchString)
+                                             || qq.TenPhuongXa.Contains(searchString));
+            }
+
+            return View(queQuans.ToList());
+        }
         // GET: TQueQuan/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -49,10 +63,6 @@ namespace QuanLyGiangDay.Controllers
         {
             return View();
         }
-
-        // POST: TQueQuan/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("MaQueQuan,TenTinhThanhPho,TenQuanHuyen,TenPhuongXa")] TQueQuan tQueQuan)
@@ -81,10 +91,6 @@ namespace QuanLyGiangDay.Controllers
             }
             return View(tQueQuan);
         }
-
-        // POST: TQueQuan/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MaQueQuan,TenTinhThanhPho,TenQuanHuyen,TenPhuongXa")] TQueQuan tQueQuan)

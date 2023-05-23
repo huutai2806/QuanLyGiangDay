@@ -5,11 +5,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Sinh viên</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Thêm</a>
 </p>
+<form method="get">
+    <p>
+        <input type="search" name="searchString" value="@ViewBag.CurrentFilter" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -80,9 +86,9 @@
                 @Html.DisplayFor(modelItem => item.MaTonGiaoNavigation.MaTonGiao)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.MaSinhVien">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaSinhVien">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaSinhVien">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.MaSinhVien">Sửa</a> |
+                <a asp-action="Details" asp-route-id="@item.MaSinhVien">Chi tiết</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaSinhVien">Xóa</a>
             </td>
         </tr>
 }
